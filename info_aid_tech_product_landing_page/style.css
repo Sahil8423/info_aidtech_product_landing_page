@@ -1,0 +1,99 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    
+    perspective: 10px; /* 3d effect on krne ke liye value se frk nhi pdega*/
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;  /*3d effect on*/
+    z-index: -1;
+}
+
+.background{
+    transform: translateZ(-40px) scale(5) ;  /*Dur ki iamge ko bda krne ke liye scale ka use krte hai*/
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+.background , .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+ 
+}
+
+h1{
+    position: absolute;
+    top:5rem;
+
+    font-size:10rem;
+    letter-spacing:4px;
+    color:white;
+    text-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+section{
+    background-color:black;
+    color: white;
+    padding: 5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.desc{
+    
+    color: black;
+    font-size: 3.5rem;
+    position: absolute;
+    top: 50%; /* Vertical alignment - move the top edge to the vertical center */
+    left: 50%; /* Horizontal alignment - move the left edge to the horizontal center */
+    transform: translate(-50%, -50%); /* Center the text using transform */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional background color for better readability */
+    padding: 10px;
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+
+.scheading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;  
+}
